@@ -2,6 +2,7 @@
   "name": "node-jwt",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": { "start": "env-cmd -f ./.env nodemon src/app.js" },
   "repository": "https://github.com/KarnYong/node-jwt",
   "license": "MIT",
   "description": "node express authentication API with mongodb",
