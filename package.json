@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": { "start": "env-cmd -f ./.env nodemon src/app.js" },
-  "repository": "https://github.com/KarnYong/node-jwt",
+  "repository": "https://github.com/KarnYong/nodejs-jwt-mongodb",
   "license": "MIT",
   "description": "node express authentication API with mongodb",
   "author": "Karn Yong",
