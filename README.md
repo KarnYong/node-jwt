@@ -11,7 +11,6 @@ mongo --host localhost --port 27017
 * Create an admin user to read/write any database.
 ```bash
 use admin
-)
 ```
 ```bash
 db.createUser(
