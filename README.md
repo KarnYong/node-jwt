@@ -27,7 +27,7 @@ db.createUser(
 ```bash
 git clone https://github.com/KarnYong/nodejs-jwt-mongodb.git
 ```
-* Take a look at .env file in case you want to cange mongodb url, JWT key or api running port.
+* Take a look at .env file in case you want to change mongodb url, JWT key or api running port.
 * Finally start the API.
 ```bash
 cd nodejs-jwt-mongodb
