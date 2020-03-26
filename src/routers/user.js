@@ -18,7 +18,7 @@ router.post('/users', async (req, res) => {
             res.status(200).send({ 'status': 'error', 'message': 'Registration Failed - Duplicate Email Address' })
         }
     } catch (error) {
-        res.status(200).send({ 'status': 'error', 'meesage': 'Registration Failed', error })
+        res.status(200).send({ 'status': 'error', 'message': 'Registration Failed', error })
     }
 })
  
