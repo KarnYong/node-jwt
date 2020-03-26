@@ -13,7 +13,7 @@ router.post('/users', async (req, res) => {
             const new_user = new User(req.body)
             await new_user.save()
             const token = await new_user.generateAuthToken()
-            res.status(201).send({ 'status': 'ok', new_user, token })
+            res.status(201).send({ 'status': 'ok', 'message': 'Registration Complete', new_user, token })
         } else {
             res.status(200).send({ 'status': 'error', 'message': 'Registration Failed - Duplicate Email Address' })
         }
@@ -31,7 +31,7 @@ router.post('/users/login', async(req, res) => {
             res.status(200).send({ 'status': 'error', 'message': 'Login failed' })
         }
         const token = await user.generateAuthToken()
-        res.status(200).send({ 'status': 'ok', user, token })
+        res.status(200).send({ 'status': 'ok', 'message': 'Login Successful', user, token })
     } catch (error) {
         res.status(200).send({ 'status': 'error', 'message': 'Login failed' })
     }
@@ -50,7 +50,7 @@ router.post('/users/me/logout', auth, async (req, res) => {
             return token.token != req.token
         })
         await req.user.save()
-        res.status(200).send({ 'status': 'ok' })
+        res.status(200).send({ 'status': 'ok', 'message': 'Logout Successful' })
     } catch (error) {
         res.status(200).send({ 'status': 'error', 'message': 'Logout failed' })
     }
@@ -61,7 +61,7 @@ router.post('/users/me/logoutall', auth, async(req, res) => {
     try {
         req.user.tokens.splice(0, req.user.tokens.length)
         await req.user.save()
-        res.status(200).send({'status': 'ok'})
+        res.status(200).send({'status': 'ok', 'message': 'Logout All Successful'})
     } catch (error) {
         res.status(200).send({ 'status': 'error', 'message': 'Logout failed' })
     }
