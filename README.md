@@ -84,7 +84,7 @@ This section describe how to use API:
 ```
 
 ## Get user detail (authentication required)
-* Method: GET
+* Method: POST
 * Request URL: http://localhost:3000/users/me
 * Authorization Type: Bearer Token
 * Token: `<<TOKEN>>`
