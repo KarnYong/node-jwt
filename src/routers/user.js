@@ -38,7 +38,7 @@ router.post('/users/login', async(req, res) => {
  
 })
  
-router.get('/users/me', auth, async(req, res) => {
+router.post('/users/me', auth, async(req, res) => {
     // View logged in user profile
     res.status(200).send({'status': 'ok', user: req.user})
 })
